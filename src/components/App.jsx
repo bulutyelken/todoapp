@@ -21,16 +21,15 @@ function App() {
     document.getElementById("todo").value = ""//
   }
 
-  function remove(topic){
-    console.log(topic +" silindi");
+  function remove(id){
+    console.log(id +" silindi");
     setTodos(prevItems => {
       return prevItems.filter(
         (item)=>{
-          return item.topic !== topic
+          return item.id !== id;
         }
       )
     })
-    console.log(todos);
   }
 
   return (
